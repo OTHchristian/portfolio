@@ -944,7 +944,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="mt-3.5">
-                  <button type="button" onClick={testFunc} className="w-full h-15 rounded-lg text-white bg-blue-500">Envoyer ma demade</button>
+                  <button type="button" className="w-full h-15 rounded-lg text-white bg-blue-500">Envoyer ma demade</button>
                 </div>
               </form>
             </div>
