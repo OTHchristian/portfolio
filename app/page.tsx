@@ -1,4 +1,11 @@
 import NavBar from "@/components/ui/navBar";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function Home() {
   return (
@@ -9,8 +16,8 @@ export default function Home() {
         <section className="w-full flex flex-col xl:flex-row items-center justify-between xl:p-5 mt-5" id="home">
           <div className="w-full xl:w-1/2  flex items-center justify-center mt-5">
             <div>
-              <h1 className="text-2xl xl:text-4xl font-semibold">Developpeur <span className="text-blue-500">fullstack</span></h1>
-              <h2 className="text-xl xl:text-3xl text-blue-400 mt-3.5">Solution sur mesure</h2>
+              <h1 className="text-4xl font-semibold">Developpeur <span className="text-blue-500">fullstack</span></h1>
+              <h2 className="text-3xl text-blue-400 mt-3.5">Solution sur mesure</h2>
               <p className="mt-3.5 text-xl">Créateur de solutions digitales innovantes : sites web,</p>
               <p className="mt-3.5 text-xl"> applications mobiles, cybersécurité et </p>
               <p className="mt-3.5 text-xl">accompagnement technique personnalisé.</p>
@@ -422,7 +429,192 @@ export default function Home() {
           </div>
         </section>
 
-        
+        <section className="w-full xl:p-5 mt-5" id="a-propos">
+          <div className="w-full text-center">
+            <h1 className="text-xl xl:text-4xl font-semibold text-blue-500">A Propos</h1>
+            <p className="mt-3.5">Ingénieur en informatique passionné par le développement et les nouvelles technologies.</p>
+            <p>Une approche humaine et personnalisée pour chaque projet.</p>
+          </div>
+          <div className="grid xl:grid-cols-2 gap-5 mt-3.5 md:p-10">
+            <div>
+              <div className="bg-blue-100 rounded-xl p-3.5">
+                <div className="flex gap-3 items-center">
+                  <div className="h-10 w-10 bg-blue-500 text-white flex items-center justify-center p-10 rounded-full">
+                    <h1 className="font-semibold text-2xl">C.O</h1>
+                  </div>
+                  <div>
+                    <h1 className="font-semibold text-2xl">Christian OTH</h1>
+                    <h2>Développeur Full-Stack & Gestionnaire de Projets</h2>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-2 mt-3.5">
+                  <div className="flex gap-5 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="oklch(62.3% 0.214 259.815)" className="bi bi-pin-map" viewBox="0 0 16 16">
+                      <path fillRule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z"/>
+                      <path fillRule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
+                    </svg>
+                    <p>Douala, Cameroun</p>
+                  </div>
+                  <div className="flex gap-5 items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="oklch(62.3% 0.214 259.815)" className="bi bi-calendar" viewBox="0 0 16 16">
+                      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                    </svg>
+                    <p>Disponible</p>
+                  </div>
+                  <div className="flex gap-5 items-center md:mt-3.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="oklch(62.3% 0.214 259.815)" className="bi bi-mortarboard" viewBox="0 0 16 16">
+                      <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z"/>
+                      <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z"/>
+                    </svg>
+                    <p>Ingenieur en informatique</p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-5">
+                <p>Consultant en cybersécurité et développeur web, je conçois et intègre des solutions numériques sur mesure depuis plus de 2 ans. Ma philosophie : allier sécurité, performance et design pour créer des outils fiables qui répondent aux véritables enjeux business. J’assure le suivi complet des projets avec un investissement personnel plus fort qu’une société de conseil classique, tout en restant beaucoup plus abordable.Que ce soit pour un site vitrine, une application web complexe, une intégration API ou de l’automatisation sécurisée, j’accompagne mes clients de A à Z avec une approche transparente et des méthodes éprouvées.</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-3">
+              <div className="h-50 border border-gray-200 rounded-xl p-3.5">
+                {/* icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(62.3% 0.214 259.815)" className="bi bi-heart" viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
+                {/* titre */}
+                <h1 className="font-semibold text-xl mt-3.5">Approche Humaine</h1>
+                {/* description */}
+                <p className="mt-3.5">Chaque projet est unique, je prends le temps de comprendre vos besoins spécifiques</p>
+              </div>
+              <div className="h-50 border border-gray-200 rounded-xl p-3.5">
+                {/* icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(62.3% 0.214 259.815)" className="bi bi-lightbulb" viewBox="0 0 16 16">
+                  <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+                </svg>
+                {/* titre */}
+                <h1 className="font-semibold text-xl mt-3.5">Innovation</h1>
+                {/* description */}
+                <p className="mt-3.5">Toujours à l'affût des dernières technologies pour des solutions modernes</p>
+              </div>
+              <div className="h-50 border border-gray-200 rounded-xl p-3.5">
+                {/* icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(62.3% 0.214 259.815)" className="bi bi-bullseye" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+                  <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                </svg>
+                {/* titre */}
+                <h1 className="font-semibold text-xl mt-3.5">Resultats</h1>
+                {/* description */}
+                <p className="mt-3.5">Focus sur les objectifs concrets et la valeur ajoutée pour votre business</p>
+              </div>
+              <div className="h-50 border border-gray-200 rounded-xl p-3.5">
+                {/* icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(62.3% 0.214 259.815)" className="bi bi-people" viewBox="0 0 16 16">
+                  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
+                </svg>
+                {/* titre */}
+                <h1 className="font-semibold text-xl mt-3.5">Collaboration</h1>
+                {/* description */}
+                <p className="mt-3.5">Travail en étroite collaboration, transparence et communication continue</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full xl:p-5 mt-5" id="contact-us">
+          <div className="w-full text-center">
+            <h1 className="text-xl xl:text-4xl font-semibold text-blue-500">Démarrons Votre projet</h1>
+            <p className="mt-3.5">Prêt à concrétiser vos idées ? Contactez-moi pour un devis gratuit et personnalisé.</p>
+            <p> Réponse garantie sous 24h.</p>
+          </div>
+          <div className="flex flex-col xl:flex-row items-start justify-center gap-5 mt-3.5">
+            <div className="w-full xl:w-1/3 p-3.5 mt-3.5">
+              <h1 className="font-semibold text-2xl">Information de contact</h1>
+              <div className="mt-3 5">
+                <div className="flex gap-3 items-center mt-3.5">
+                  <div className="rounded-full h-3 w-3 bg-gray-400"></div>
+                  <p className="text-blue-500">othchristian@icloud.com</p>
+                </div>
+                <div className="flex gap-3 items-center mt-3.5">
+                  <div className="rounded-full h-3 w-3 bg-gray-400"></div>
+                  <p> 621 77 63 01</p>
+                </div>
+                <div className="flex gap-3 items-center mt-3.5">
+                  <div className="rounded-full h-3 w-3 bg-gray-400"></div>
+                  <p>Douala, Cameroun</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-full xl:w-2/3 p-3.5 border border-gray-200 mt-3.5 rounded-xl">
+              <h1 className="text-2xl font-semibold">Parlez-moi de Votre Projet</h1>
+              <form action="" method="post" className="mt-3.5">
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="mt-3.5">
+                    <p>Prenom*</p>
+                    <input type="text" className="mt-1 w-full border border-gray-200 h-10 rounded-sm hover:border-blue-500 focus:outline-0 p-2" placeholder="Votre Prenom" required/>
+                  </div>
+                  <div className="mt-3.5">
+                    <p>Email*</p>
+                    <input type="email" className="mt-1 w-full border border-gray-200 h-10 rounded-sm hover:border-blue-500 focus:outline-0 p-2" placeholder="Votre Email" required/>
+                  </div>
+                  <div className="mt-3 5">
+                    <p>Type de project</p>
+                    <div className="mt-1">
+                      <Select>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Selectionnez.." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="light">Site Vitrine</SelectItem>
+                          <SelectItem value="dark">Site E-commerce</SelectItem>
+                          <SelectItem value="system0">Application Mobile</SelectItem>
+                          <SelectItem value="system1">Bot/Automatisation</SelectItem>
+                          <SelectItem value="system2">Maintenance</SelectItem>
+                          <SelectItem value="system3">Autres</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                  <div className="mt-3 5">
+                    <p>Budget Estimé</p>
+                    <div className="mt-1">
+                      <Select>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="Selectionnez.." />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="light">0-200$</SelectItem>
+                          <SelectItem value="dark">200$-500$</SelectItem>
+                          <SelectItem value="system0">500$-1000$</SelectItem>
+                          <SelectItem value="system1">1000$-2500$</SelectItem>
+                          <SelectItem value="system2">2500$-5000$</SelectItem>
+                          <SelectItem value="system3">A Definir</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 5">
+                  <p>Delai souhaité</p>
+                  <div className="mt-1">
+                    <Select>
+                      <SelectTrigger className="w-full">
+                        <SelectValue placeholder="Selectionnez.." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="light">Urgent(- 2 Semaines)</SelectItem>
+                        <SelectItem value="dark">Dans le mois</SelectItem>
+                        <SelectItem value="system0">2-3 mois</SelectItem>
+                        <SelectItem value="system1">flexible</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
 
       </main>
     </div>
