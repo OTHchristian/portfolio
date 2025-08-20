@@ -1,3 +1,4 @@
+"use client"
 import NavBar from "@/components/ui/navBar";
 import {
   Select,
@@ -6,13 +7,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { useState } from "react";
 
 export default function Home() {
   return (
     <div className="bg-white p-4">
       <NavBar></NavBar>
       <main>
-
         <section className="w-full flex flex-col xl:flex-row items-center justify-between xl:p-5 mt-5" id="home">
           <div className="w-full xl:w-1/2  flex items-center justify-center mt-5">
             <div>
@@ -39,7 +40,7 @@ export default function Home() {
           </div>
           <div className="w-full xl:w-1/2 xl:h-150 flex items-center justify-center xl:relative mt-3.5">
             <div className="w-full md:grid md:grid-cols-2 md:gap-3 xl:block md:items-center md:justify-center">
-              <div className="w-full xl:w-auto p-5 border border-gray-200 rounded-xl xl:rotate-10 xl:absolute xl:top-12 xl:right-0 mb-3.5 xl:mb-0">
+              <div className="xl:animate-bounce w-full xl:w-auto p-5 border border-gray-200 rounded-xl xl:rotate-10 xl:absolute xl:top-15 xl:right-0 mb-3.5 xl:mb-0">
                 {/* logo */}
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(62.3% 0.214 259.815)" className="bi bi-code" viewBox="0 0 16 16">
                     <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"/>
@@ -60,7 +61,7 @@ export default function Home() {
                 {/* text */}
                 <p className="text-gray-500">iOS, Android et applications web progressives</p>
               </div>
-              <div className="w-full xl:w-auto p-5 border border-gray-200 rounded-xl xl:hue-rotate-10 xl:absolute xl:top-40 xl:left-0 mb-3.5 xl:mb-0 xl:min-w-100">
+              <div className="w-full xl:w-auto p-5 border border-gray-200 rounded-xl xl:hue-rotate-10 xl:absolute xl:top-42 xl:left-0 mb-3.5 xl:mb-0 xl:min-w-100">
                 {/* logo */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="oklch(63.7% 0.237 25.331)" className="bi bi-shield-check" viewBox="0 0 16 16">
                   <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
@@ -266,6 +267,331 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="w-full xl:p-5 mt-5" id="methodes">
+          <div className="w-full text-center">
+            <h1 className="text-xl xl:text-4xl font-semibold text-blue-500">Mes Methodes</h1>
+            <p className="mt-3.5">Une approche structurée et transparente pour garantir la réussite de votre projet.</p>
+            <p>Méthodes éprouvées et outils professionnels.</p>
+          </div>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 mt-3.5">
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code2 h-8 w-8"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Code Livré</p>
+              {/* text */}
+              <p className="mt-3.5">Vous recevez l'intégralité du code source de votre projet</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Propriété complète</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Documentation fournie</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Code commenté</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Aucune dépendance</p>
+                </div>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-git-branch h-8 w-8"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Versionning Git</p>
+              {/* text */}
+              <p className="mt-3.5">Suivi complet des modifications avec historique détaillé</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Historique complet</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Branches de développement</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Sauvegarde automatique</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Collaboration facilitée</p>
+                </div>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-test-tube h-8 w-8"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5h0c-1.4 0-2.5-1.1-2.5-2.5V2"></path><path d="M8.5 2h7"></path><path d="M14.5 16h-5"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Tests & Validation</p>
+              {/* text */}
+              <p className="mt-3.5">Tests rigoureux sur tous les navigateurs et appareils</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Tests multi-navigateurs</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Tests responsive</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Validation W3C</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Tests de performance</p>
+                </div>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket h-8 w-8"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Mise en Production</p>
+              {/* text */}
+              <p className="mt-3.5">Déploiement sécurisé et configuration complète</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Hébergement inclus</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Configuration SSL</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Optimisations</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Mise en ligne</p>
+                </div>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cog h-8 w-8"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Support Continu</p>
+              {/* text */}
+              <p className="mt-3.5">Assistance technique et maintenance préventive</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Support 24/7</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Mises à jour</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Corrections bugs</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Évolutions</p>
+                </div>
+              </div>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-3.5">
+              {/* logo */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="oklch(62.3% 0.214 259.815)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield h-8 w-8"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+              {/* titre */}
+              <p className="font-semibold text-xl mt-3.5">Sécurité</p>
+              {/* text */}
+              <p className="mt-3.5">Protection maximale contre les menaces</p>
+              {/* enumeration */}
+              <div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Sécurisation code</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Certificats SSL</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Sauvegardes</p>
+                </div>
+                <div className="flex gap-1 items-center mt-3.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check-circle h-4 w-4 text-green-500 mr-2 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <p>Monitoring</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border border-gray-200 rounded-xl p-8 mt-5">
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-12">Processus de Développement</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="relative">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">01</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-users h-6 w-6">
+                          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="9" cy="7" r="4"></circle>
+                          <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900">Analyse des besoins</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">Étude approfondie de votre projet et de vos objectifs</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">02</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-monitor h-6 w-6">
+                          <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                          <line x1="8" x2="16" y1="21" y2="21"></line>
+                          <line x1="12" x2="12" y1="17" y2="21"></line>
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900">Conception &amp; Design</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">Création des maquettes et de l'architecture technique</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">03</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code2 h-6 w-6">
+                          <path d="m18 16 4-4-4-4"></path>
+                          <path d="m6 8-4 4 4 4"></path>
+                          <path d="m14.5 4-5 16"></path>
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900">Développement</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">Codage avec méthodes agiles et tests réguliers</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">04</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-test-tube h-6 w-6">
+                          <path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5h0c-1.4 0-2.5-1.1-2.5-2.5V2"></path>
+                          <path d="M8.5 2h7"></path><path d="M14.5 16h-5"></path>
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900">Tests &amp; Validation</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">Vérification complète et optimisations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">05</div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="text-blue-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket h-6 w-6">
+                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                      </svg>
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-900">Déploiement</h4>
+                  </div>
+                  <p className="text-gray-600 text-sm">Mise en production et formation</p>
+                </div>
+              </div>
+              </div>
+              <div className="relative">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">06</div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <div className="text-blue-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-cog h-6 w-6">
+                          <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                          <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                          <path d="M12 2v2"></path><path d="M12 22v-2"></path>
+                          <path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path>
+                          <path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path>
+                          <path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path>
+                          <path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path>
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900">Maintenance</h4>
+                    </div>
+                    <p className="text-gray-600 text-sm">Support continu et évolutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-16 grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-clock h-8 w-8 text-green-600 mx-auto mb-4">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Délais Respectés</h4>
+              <p className="text-gray-600 text-sm">98% de nos projets livrés dans les temps convenus</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shield h-8 w-8 text-blue-600 mx-auto mb-4">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+              </svg>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Qualité Garantie</h4>
+              <p className="text-gray-600 text-sm">Code professionnel et tests complets inclus</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-headphones h-8 w-8 text-purple-600 mx-auto mb-4">
+                <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path>
+              </svg>
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">Support Dédié</h4>
+              <p className="text-gray-600 text-sm">Assistance continue et réponse sous 24h</p>
+            </div>
+          </div>
+        </section>
+
         <section className="w-full xl:p-5 mt-5" id="expertises">
           <div className="w-full text-center">
             <h1 className="text-xl xl:text-4xl font-semibold text-blue-500">Mon Expertise</h1>
@@ -279,12 +605,12 @@ export default function Home() {
                   <p>Frontend</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">HTML 5</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">CSS 3</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">javascript</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">React</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Tailwincss</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Typescript</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">HTML 5</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">CSS 3</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">javascript</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">React</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Tailwincss</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Typescript</div>
                 </div>
             </div>
             <div className="p-3 5 border border-gray-200 rounded-xl">
@@ -293,11 +619,11 @@ export default function Home() {
                   <p>Backend</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Node js</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Python</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">PHP</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Laravel</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">API REST</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Node js</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Python</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">PHP</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Laravel</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">API REST</div>
                 </div>
             </div>
             <div className="p-3 5 border border-gray-200 rounded-xl">
@@ -306,8 +632,8 @@ export default function Home() {
                   <p>Mobile</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">React Native</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Kivy</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">React Native</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Kivy</div>
                 </div>
             </div>
             <div className="p-3 5 border border-gray-200 rounded-xl">
@@ -316,9 +642,9 @@ export default function Home() {
                   <p>DevOps</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Docker</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Linux</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Apache</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Docker</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Linux</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Apache</div>
                 </div>
             </div>
             <div className="p-3 5 border border-gray-200 rounded-xl">
@@ -327,9 +653,9 @@ export default function Home() {
                   <p>Database</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Mysqlite</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">MySQL</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">MongoDB</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Mysqlite</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">MySQL</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">MongoDB</div>
                 </div>
             </div>
             <div className="p-3 5 border border-gray-200 rounded-xl">
@@ -338,10 +664,10 @@ export default function Home() {
                   <p>Tools</p>
                 </div>
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">VS Code</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Git</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Figma</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Postman</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">VS Code</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Git</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Figma</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Postman</div>
                 </div>
             </div>
           </div>
@@ -366,10 +692,10 @@ export default function Home() {
                 </div>
                 {/* skills utilisés */}
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">HTML</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">CSS</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Javascript</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">PHP</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">HTML</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">CSS</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Javascript</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">PHP</div>
                 </div>
               </div>
               <div className="p-3 5 border border-gray-200 rounded-xl bg-white">
@@ -390,10 +716,10 @@ export default function Home() {
                 </div>
                 {/* skills utilisés */}
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">HTML</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">CSS</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Javascript</div>
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">PHP</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">HTML</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">CSS</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Javascript</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">PHP</div>
                 </div>
               </div>
               <div className="p-3 5 border border-gray-200 rounded-xl bg-white">
@@ -414,7 +740,7 @@ export default function Home() {
                 </div>
                 {/* skills utilisés */}
                 <div className="flex flex-wrap gap-3 mt-3.5">
-                  <div className="bg-gray-200 rounded-full pl-4 pr-4">Next Js</div>
+                  <div className="bg-gray-200 rounded-full pl-4 pr-4 hover:bg-gray-500">Next Js</div>
                 </div>
               </div>
             </div>
@@ -443,7 +769,7 @@ export default function Home() {
                     <h1 className="font-semibold text-2xl">C.O</h1>
                   </div>
                   <div>
-                    <h1 className="font-semibold text-2xl">Christian OTH</h1>
+                    <h1 className="font-semibold text-xl xl:text-2xl">Christian OTH</h1>
                     <h2>Développeur Full-Stack & Gestionnaire de Projets</h2>
                   </div>
                 </div>
@@ -548,15 +874,15 @@ export default function Home() {
             </div>
             <div className="w-full xl:w-2/3 p-3.5 border border-gray-200 mt-3.5 rounded-xl">
               <h1 className="text-2xl font-semibold">Parlez-moi de Votre Projet</h1>
-              <form action="" method="post" className="mt-3.5">
+              <form action="/" method="post" className="mt-3.5">
                 <div className="grid md:grid-cols-2 gap-3">
                   <div className="mt-3.5">
                     <p>Prenom*</p>
-                    <input type="text" className="mt-1 w-full border border-gray-200 h-10 rounded-sm hover:border-blue-500 focus:outline-0 p-2" placeholder="Votre Prenom" required/>
+                    <input name="prenom" type="text" className="mt-1 w-full border border-gray-200 h-10 rounded-sm focus:outline-blue-500 p-2" placeholder="Votre Prenom" required/>
                   </div>
                   <div className="mt-3.5">
                     <p>Email*</p>
-                    <input type="email" className="mt-1 w-full border border-gray-200 h-10 rounded-sm hover:border-blue-500 focus:outline-0 p-2" placeholder="Votre Email" required/>
+                    <input name="email" type="email" className="mt-1 w-full border border-gray-200 h-10 rounded-sm  focus:outline-blue-500 p-2" placeholder="Votre Email" required/>
                   </div>
                   <div className="mt-3 5">
                     <p>Type de project</p>
@@ -595,7 +921,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="mt-3 5">
+                <div className="mt-3.5">
                   <p>Delai souhaité</p>
                   <div className="mt-1">
                     <Select>
@@ -611,12 +937,52 @@ export default function Home() {
                     </Select>
                   </div>
                 </div>
+                <div className="mt-3.5">
+                  <p>Description du Projet *</p>
+                  <div className="mt-1">
+                    <textarea name="description" id="" className="w-full h-40 rounded-xl p-3.5 pl border border-gray-200 focus:outline-blue-500" placeholder="Décrivez votre projet, vos objectifs, fonctionnalités souhaitées..." required rounded-xl></textarea>
+                  </div>
+                </div>
+                <div className="mt-3.5">
+                  <button type="button" onClick={testFunc} className="w-full h-15 rounded-lg text-white bg-blue-500">Envoyer ma demade</button>
+                </div>
               </form>
             </div>
           </div>
         </section>
-
       </main>
+
+      <footer className="bg-black mt-20 md:p-10 p-3.5 text-white">
+        <div className="flex flex:row justify-between items-start pl-10 xl:pl-0">
+          <div className="w-0 h-0 opacity-0 xl:w-1/5 xl:opacity-100">
+            <h1 className="font-semibold  mb-3.5">Christian OTH</h1>
+            <p>Développeur Full-Stack & Gestionnaire de Projets</p>
+            <p className="mt-2">© Copyright 2025 inbox-detox</p>
+          </div>
+          <div className="w-1/2 xl:w-1/5">
+            <h1 className="font-semibold mb-5">navigation</h1>
+            <p className="mt-2 text-gray-400"><a href="#services">Services</a></p>
+            <p className="mt-2 text-gray-400"><a href="#methodes">Methodes</a></p>
+            <p className="mt-2 text-gray-400"><a href="#expertises">Expertise</a></p>
+            <p className="mt-2 text-gray-400"><a href="#a-propos">A propos</a></p>
+            <p className="mt-2 text-gray-400"><a href="#contact-us">Contact</a></p>
+            
+          </div>
+          <div className="w-1/2 xl:w-1/5">
+            <h1 className="font-semibold mb-5">liens utiles</h1>
+            <p className="mt-2 text-gray-400">blog</p>
+            <p className="mt-2 text-gray-400">Instagram</p>
+            <p className="mt-2 text-gray-400">LinkedIn</p>
+            <p className="mt-2 text-gray-400">fr <span className="font-bold text-black">fr</span></p>
+          </div>
+        </div>
+        <div className="w-full flex justify-center mt-20 xl:opacity-0 xl:h-0">
+          <div className="text-center">
+            <h1 className="font-semibold  mb-5 text-blue-500">C.O</h1>
+            <p className="mt-2">© Copyright 2025</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
