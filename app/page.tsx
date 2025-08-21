@@ -23,8 +23,8 @@ export default function Home() {
               <p className="mt-3.5 text-xl"> applications mobiles, cybersécurité et </p>
               <p className="mt-3.5 text-xl">accompagnement technique personnalisé.</p>
               <div className="flex flex-col md:flex-row gap-5">
-                <button className="w-full md:w-auto p-3.5 rounded-xl bg-blue-500 text-white mt-2 md:mt-5">Decouvrir mes services</button>
-                <button className="w-full md:w-auto p-3.5 rounded-xl text-blue-500 bg-white md:mt-5 border border-gray-400">Demander un devis</button>
+                <button onClick={()=>{window.location.href="#services"}} className="w-full md:w-auto p-3.5 rounded-xl bg-blue-500 text-white mt-2 md:mt-5">Decouvrir mes services</button>
+                <button onClick={()=>{window.location.href="mailto:othchristian@icloud.com"}} className="w-full md:w-auto p-3.5 rounded-xl text-blue-500 bg-white md:mt-5 border border-gray-400">Demander un devis</button>
               </div>
               <div className="flex flex-col xl:flex-row gap-3 mt-5">
                 <div className="flex gap-3 items-center mt-3.5">
@@ -864,7 +864,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-3 items-center mt-3.5">
                   <div className="rounded-full h-3 w-3 bg-gray-400"></div>
-                  <p> 621 77 63 01</p>
+                  <p>+237 696 83 60 11</p>
                 </div>
                 <div className="flex gap-3 items-center mt-3.5">
                   <div className="rounded-full h-3 w-3 bg-gray-400"></div>
